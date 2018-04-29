@@ -1,0 +1,154 @@
+//colors
+$grey-color-dark: #48494f;
+$grey-color-light2: #9b9b9b;
+$grey-color-light: #CBCBCB;
+$bg-color: #2D2D32;
+$green-color: #21B249;
+
+//styles
+.carnelits-area {
+  padding: 50px;
+
+  margin: 0 auto;
+}
+
+.carnelit-block {
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+
+  float: left;
+  margin-right: 1rem;
+
+  width: 14.2857rem;
+  text-align: center;
+
+  &__desc {
+    font-size: 1.2em;
+  }
+
+  &__percent,
+  &__mass {
+    display: block;
+    margin: 1rem auto 1.5rem;
+    width: 40%;
+
+    font-size: 2em;
+    font-weight: 400;
+    border-bottom: solid 3px #21B149;
+  }
+
+  &__percent{
+    border-bottom: none;
+  }
+
+
+  &__status-line{
+    height: 3px;
+    width: 100%;
+    background-color: #21B149;
+  }
+}
+
+.red{
+  background-color: red;
+}
+.green{
+  background-color: #21B149;
+}
+
+.carnelit-tower {
+
+  &__head {
+    width: 30%;
+    height: 5px;
+    margin: 0 auto 15px;
+    background-color: #8B959F;
+  }
+
+  &__column {
+    position: relative;
+
+    margin: 0 auto;
+  }
+
+  &__section {
+    display: block;
+    position: relative;
+
+    width: 90%;
+    height: 100px;
+
+    margin: 0 auto 15px;
+
+    background: linear-gradient(to right, $grey-color-dark, $grey-color-light2 20%, $grey-color-dark);
+
+    &:first-child {
+      &::before {
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: -5%;
+        width: 110%;
+        height: 5px;
+        content: '';
+        background-color: $grey-color-light;
+      }
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -10px;
+      left: -5%;
+      width: 110%;
+      height: 5px;
+      content: '';
+      background-color: $grey-color-light;
+    }
+  }
+
+  &__bottom {
+    display: block;
+    position: relative;
+
+    width: 35px;
+
+    margin: 0 auto 15px;
+
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+
+    border-top: 100px solid grey;
+    //border-image: linear-gradient(to right, $grey-color-dark, $grey-color-light2 20%, $grey-color-dark) 1 100%;
+
+    &::before{
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+
+      content: '';
+
+      width: 90px;
+      height: 50px;
+
+      border: solid 4px #21B149;
+      border-radius: 1rem;
+    }
+  }
+
+  &__level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+    background-color: $green-color;
+
+    width: 80%;
+    height: 10%;
+
+    opacity: 0.4;
+  }
+}

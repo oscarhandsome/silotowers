@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="carnelit-block">
+    <p class="carnelit-block__desc">{{ title.title }} {{ title.id }}</p>
+    <h2 class="carnelit-block__percent">{{ title.value }}%
+        <div class="carnelit-block__status-line"
+            [ngClass]="{'red': inValue}"
+        ></div>
+    </h2>
+
+    <div class="carnelit-tower">
+        <div class="carnelit-tower__head"></div>
+        <div class="carnelit-tower__column">
+            <div class="carnelit-tower__section"></div>
+            <div class="carnelit-tower__section"></div>
+            <div class="carnelit-tower__section"></div>
+            <div class="carnelit-tower__section"></div>
+            <div class="carnelit-tower__level"
+                 leveltop
+            ></div>
+        </div>
+        <div class="carnelit-tower__bottom"></div>
+
+        <p class="carnelit-block__desc">Масса карналита</p>
+        <h3 class="carnelit-block__mass">{{ title.mass }}</h3>
+    </div>
+</div>

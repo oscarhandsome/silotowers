@@ -2,15 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent, LevelTopDirective} from './app.component';
+import {TowerComponent} from "./tower/tower.component";
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TowerComponent,
+      LevelTopDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
